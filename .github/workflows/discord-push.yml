@@ -19,7 +19,7 @@ jobs:
           -d '{
             "username": "GitHub",
             "avatar_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-            "content": "🚀 **CRITICAL UPDATE: Main Branch!**\n**${{ github.actor }}** just pushed new code to `main`.\n\n🔗 [Review the changes here](${{ github.event.compare }})"
+            "content": "🚀 **CRITICAL UPDATE**\n**${{ github.actor }}** pushed to `${{ github.ref_name }}` in **${{ github.repository }}**.\n> ${{ github.event.head_commit.message }}\n\n🔗 [Review the changes here](<${{ github.event.compare }}>)"
           }' \
           $DISCORD_WEBHOOK_URL
 
