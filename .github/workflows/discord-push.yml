@@ -3,40 +3,58 @@ name: Discord Push Notifications
 on:
   push:
     branches:
-      - '**' # Triggers on pushes to all branches
+      - '**'
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Custom message for the 'main' branch
-      - name: Notify Main Branch Push
-        if: github.ref == 'refs/heads/main'
+      # Step 1: Trigger for MERGE commits to main
+      - name: Notify Main Branch Merge
+        if: github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, 'Merge')
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          # Pass the commit message into the environment securely
           COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
-          # jq safely escapes all characters and builds valid JSON
           PAYLOAD=$(jq -n \
             --arg commit "$COMMIT_MSG" \
             --arg actor "${{ github.actor }}" \
             --arg ref "${{ github.ref_name }}" \
-            --arg repo "${{ github.repository }}" \
             --arg url "${{ github.event.compare }}" \
             '{
               username: "GitHub",
               avatar_url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-              embeds: [
-                {
-                  color: 2328118,
-                  title: "🚀 CRITICAL UPDATE: Main Branch",
-                  url: $url,
-                  description: "**\($actor)** pushed to `\($ref)` in **\($repo)**.\n\n> \($commit)"
-                }
-              ]
+              embeds: [{
+                color: 8270566, # Purple for merges
+                title: "🔀 Code Merged into Main",
+                url: $url,
+                description: "**\($actor)** merged code into `\($ref)`.\n\n> \($commit)"
+              }]
             }')
+          curl -H "Content-Type: application/json" -d "$PAYLOAD" $DISCORD_WEBHOOK_URL
 
+      # Step 2: Trigger for STANDARD pushes to main
+      - name: Notify Main Branch Push
+        if: github.ref == 'refs/heads/main' && !startsWith(github.event.head_commit.message, 'Merge')
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          PAYLOAD=$(jq -n \
+            --arg commit "$COMMIT_MSG" \
+            --arg actor "${{ github.actor }}" \
+            --arg ref "${{ github.ref_name }}" \
+            --arg url "${{ github.event.compare }}" \
+            '{
+              username: "GitHub",
+              avatar_url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+              embeds: [{
+                color: 2328118, # Green for standard pushes
+                title: "🚀 CRITICAL UPDATE: Main Branch",
+                url: $url,
+                description: "**\($actor)** pushed directly to `\($ref)`.\n\n> \($commit)"
+              }]
+            }')
           curl -H "Content-Type: application/json" -d "$PAYLOAD" $DISCORD_WEBHOOK_URL
 
       # Step 2: Standard message for all other branches
