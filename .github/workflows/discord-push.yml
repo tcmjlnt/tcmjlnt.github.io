@@ -43,7 +43,7 @@ jobs:
                 if $is_merge == "true" then
                   {
                     color: 616922,
-                    title: "🔀 Code Merged into Main",
+                    title: "🚀 Code Merged into Main 🚀",
                     url: $url,
                     description: "**\($actor)** merged code into `\($ref)`.\n\n> \($commit)"
                   }
@@ -88,7 +88,7 @@ jobs:
                 if $is_merge == "true" then
                   {
                     color: 8540383,
-                    title: "🔀 Code Merged into Branch",
+                    title: "🛤️️ Code Merged into Branch 🛤️️",
                     url: $url,
                     description: "**\($actor)** merged code into `\($ref)`.\n\n> \($commit)"
                   }
