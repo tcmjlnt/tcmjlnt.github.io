@@ -57,14 +57,14 @@ jobs:
                     color: 616922,
                     title: "🚀 __**Code Merged into Main**__ 🚀",
                     url: $url,
-                    description: "__**\($actor)** merged `\($source)` into `\($ref)`.__\n\n> \($commit)"
+                    description: "**\($actor)** merged `\($source)` into `\($ref)`.\n\n> \($commit)"
                   }
                 else
                   {
                     color: 2328118,
                     title: "🌳 __**Push to Main**__ 🌳",
                     url: $url,
-                    description: "__**\($actor)** pushed directly to `\($ref)`.__\n\n> \($commit)"
+                    description: "**\($actor)** pushed directly to `\($ref)`.\n\n> \($commit)"
                   }
                 end
               ]
