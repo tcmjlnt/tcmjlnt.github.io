@@ -18,8 +18,15 @@ jobs:
           curl -H "Content-Type: application/json" \
           -d '{
             "username": "GitHub",
-            "avatar_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-            "content": "🚀 **CRITICAL UPDATE**\n**${{ github.actor }}** pushed to `${{ github.ref_name }}` in **${{ github.repository }}**.\n> ${{ github.event.head_commit.message }}\n\n🔗 [Review the changes here](<${{ github.event.compare }}>)"
+            "avatar_url": "[https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)",
+            "embeds": [
+              {
+                "color": 2328118,
+                "title": "🚀 CRITICAL UPDATE: Main Branch",
+                "url": "${{ github.event.compare }}",
+                "description": "**${{ github.actor }}** pushed to `${{ github.ref_name }}` in **${{ github.repository }}**.\n\n>${{ github.event.head_commit.message }}"
+              }
+            ]
           }' \
           $DISCORD_WEBHOOK_URL
 

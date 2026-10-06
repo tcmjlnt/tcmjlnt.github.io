@@ -1,0 +1,740 @@
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+Last commits:
+
+* push for acces
+Feat(auth): add auth status handling in front.
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/dev/profil/back
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/dev/avatar/back
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/dev/delete/back
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/dev/auth
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/dashboard
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/front/dev/auth
+MyRepoBot
+APP
+ —
+10/1/26, 11:36 AM
+🟢 New branch was pushed by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: feat/gameLaucher
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+feat(gameLauncher): add game creation with mode options
+    - add Lobby to launch game
+    - add websocket handling for Online game eith Socke.io-client
+    - connect front and back game handlers [in progress]
+MyRepoBot
+APP
+ —
+10/1/26, 12:39 PM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+fix(othello engine): update a return of fonction playMove
+fix(front/game): implement a validMove
+MyRepoBot
+APP
+ —
+10/1/26, 1:35 PM
+📋✏️ Issue was assigned to benoit-cht
+
+Issue: Tiket-MoveInDb
+Repository: 42_ft_transcendence
+📋✏️ Issue was assigned to HopHouse13
+
+Issue: Tiket-MoveInDb
+Repository: 42_ft_transcendence
+📋🟢 New Issue created by benoit-cht
+
+Title: Tiket-MoveInDb
+Repository: 42_ft_transcendence
+Type: bug, Back-end
+Description: >  Le compilateur TypeScript signale que des champs obligatoires de votre modèle Move n'ont pas été fournis lors de la création :
+
+~ bash
+Type '{ ... }' is missing the following properties from type 'MoveUncheckedCreateInput': moveNumber, boardAfter
+~
+
+le moteur ne compte pas les cou or une numérotation de cou est en clées primaire composite
+la solution possible ne pas demander le numero de cou pour une requête sql a db
+
+Note: voir les evolution future pour le replay et la reconstruction de partie
+📋✏️ Issue was updated by benoit-cht
+
+Title: Tiket-MoveInDb
+Repository: 42_ft_transcendence
+
+BODY:
+ ➡️ >  Le compilateur TypeScript signale que des champs obligatoires de votre modèle Move n'ont pas été fournis lors de la création :
+
+~ bash
+Type '{ ... }' is missing the following properties from type 'MoveUncheckedCreateInput': moveNumber, boardAfter
+~
+
+le moteur ne compte pas les cou or une numérotation de cou est en clées primaire composite
+la solution possible ne pas demander le numero de cou pour une requête sql a db
+
+Note: voir les evolution future pour le replay et la reconstruction de partie
+MyRepoBot
+APP
+ —
+10/1/26, 6:52 PM
+🟢 New branch was pushed by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: fix/botGateway
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/botGateway
+Last commits:
+
+fix(othello-gateway): creat a new fonction for creat local game
+MyRepoBot
+APP
+ —
+10/1/26, 7:59 PM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/botGateway
+Last commits:
+
+fix(othello-gateway): fix a fonction play and create to emit state
+🟢 New branch was pushed by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: fix/refreshToken
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/refreshToken
+Last commits:
+
+* refactoring(TokensCookies):
+- Token Auth -> only one feature put tokens on cookies for all flux
+- this feature -> setTokensCookies into auth.service
+* (fix)refreshToken: silent access-token refresh in JwtGuard
+MyRepoBot
+APP
+ —
+10/1/26, 9:27 PM
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/refreshToken
+Last commits:
+
+* fix(db):
+- remove moveNumber from 'moves' table
+- gameId + createdAt now is the composite PK
+fix(db):
+- remove moveNumber field from 'moves' table
+- gameId + createdAt is the composite PK now
+MyRepoBot
+APP
+ —
+10/2/26, 3:47 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+fix(othello-gateway): creat a new fonction for creat local game
+fix(othello-gateway): fix a fonction play and create to emit state
+MyRepoBot
+APP
+ —
+10/2/26, 4:11 PM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+up choix des versions des images dockers
+MyRepoBot
+APP
+ —
+10/2/26, 4:46 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+fix(nginx): add custom client max body size in default nginx config
+MyRepoBot
+APP
+ —
+10/2/26, 6:26 PM
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+Last commits:
+
+* refactoring(TokensCookies):
+- Token Auth -> only one feature put tokens on cookies for all flux
+- this feature -> setTokensCookies into auth.service
+* (fix)refreshToken: silent access-token refresh in JwtGuard
+MyRepoBot
+APP
+ —
+10/2/26, 6:38 PM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/interChat
+Last commits:
+
+feat(Chat.tsx): UXI of chat
+fixt(Chat.tsx): overflow auto max heigth
+🟢 New branch was pushed by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: feat/interChat
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+updated charts for backend and thresholds for eventloop lag
+MyRepoBot
+APP
+ —
+10/2/26, 7:49 PM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+aojut dun nouveau dashboard plus precis pour la database, debut ajout exporter nginx
+MyRepoBot
+APP
+ —
+10/2/26, 8:48 PM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+ajout dun exporter nginx et panel de monitoring pour nginx
+MyRepoBot
+APP
+ —
+10/3/26, 1:34 PM
+🚫 Branch was deleted by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/botGateway
+🚫 Branch was deleted by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/bot-minmax
+MyRepoBot
+APP
+ —
+10/3/26, 8:16 PM
+🟢 New branch was pushed by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: fix/noobBot
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/noobBot
+Last commits:
+
+fix(bot): implemente a new version of bot for a easy
+MyRepoBot
+APP
+ —
+10/3/26, 8:33 PM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+ajout configuration securite grafana + recherche implementation cadvisor abandonnee
+MyRepoBot
+APP
+ —
+10/3/26, 10:41 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/design/board
+Last commits:
+
+design(board) redisgn game board
+    - change secondary color
+    - clean Board code
+design(game header): add game header
+    - add score and profile cards with avatar and username.
+    - modify available movement indicator
+🟢 New branch was pushed by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: design/board
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+design(board) redisgn game board
+    - change secondary color
+    - clean Board code
+design(game header): add game header
+    - add score and profile cards with avatar and username.
+    - modify available movement indicator
+MyRepoBot
+APP
+ —
+10/3/26, 11:17 PM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+added alerting rules for grafana - critical type tied to a discord webhook and other to time series graph
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+removed GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH env variable from docker-compose
+MyRepoBot
+APP
+ —
+10/4/26, 1:34 AM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/monitoring
+Last commits:
+
+removed discord webhook URL from public pushed files - WHOOPS - added as and env variable
+MyRepoBot
+APP
+ —
+10/4/26, 1:50 AM
+🟢 New branch was pushed by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: fix/keyPrimaryComposit
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/keyPrimaryComposit
+MyRepoBot
+APP
+ —
+10/4/26, 2:03 AM
+➡️➡️ Changes were FORCE pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+MyRepoBot
+APP
+ —
+10/4/26, 2:35 AM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/merge/feature-frontend
+Last commits:
+
+Merge remote-tracking branch 'origin/fix/noobBot' into merge/feature-frontend
+refactor(.gitignore): update file for a upload avatar
+🟢 New branch was pushed by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: merge/feature-frontend
+🚫 Branch was deleted by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/noobBot
+MyRepoBot
+APP
+ —
+10/4/26, 2:52 AM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/merge/feature-frontend
+Last commits:
+
+feat(Chat.tsx): UXI of chat
+fixt(Chat.tsx): overflow auto max heigth
+🚫 Branch was deleted by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/interChat
+MyRepoBot
+APP
+ —
+10/4/26, 3:02 AM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/merge/feature-frontend
+Last commits:
+
+refactor(./): delete a package-lock.json in at the root
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+feat(history): add a moves history back
+    - redisign of the moves history
+    - minor fix on board display (pixel bugs)
+MyRepoBot
+APP
+ —
+10/4/26, 3:22 AM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+Last commits:
+
+feat(gameLauncher): add game creation with mode options
+    - add Lobby to launch game
+    - add websocket handling for Online game eith Socke.io-client
+    - connect front and back game handlers [in progress]
+fix(othello engine): update a return of fonction playMove
+MyRepoBot
+APP
+ —
+10/4/26, 4:01 AM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/merge/feature-frontend
+Last commits:
+
+feat(Local): implement game local
+MyRepoBot
+APP
+ —
+10/4/26, 9:52 AM
+📋✏️ Issue was assigned to HopHouse13
+
+Issue: Need DataBase
+Repository: 42_ft_transcendence
+📋🟢 New Issue created by benoit-cht
+
+Title: Need DataBase
+Repository: 42_ft_transcendence
+Type: DataBase
+Description: besion d'une nouvel implementation de GameStatus
+
+~~
+enum GameStatus {
+
+        WAITING
+    PROGRESS
+    FINISHED
+    ABANDONED
+
+    @ @map( "game_status" )
+}
+~
+MyRepoBot
+APP
+ —
+10/4/26, 12:26 PM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/merge/feature-frontend
+Last commits:
+
+feat/refactorig(backend-othello): refactorig code and write gateway for refrache game
+feat(websocket): write a websocket for a refrache
+MyRepoBot
+APP
+ —
+10/4/26, 12:59 PM
+🚫 Branch was deleted by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/design/board
+🟢 New branch was pushed by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: feat/friendship
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/friendship
+Last commits:
+
+* feat(db): add Friendship model
+Merge branch 'main' into feat/friendship
+MyRepoBot
+APP
+ —
+10/4/26, 2:11 PM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/merge/feature-frontend
+Last commits:
+
+poc(chat-history): test integration chat
+MyRepoBot
+APP
+ —
+10/4/26, 4:26 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+feat(Chat.tsx): UXI of chat
+fixt(Chat.tsx): overflow auto max heigth
+MyRepoBot
+APP
+ —
+10/4/26, 5:04 PM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+Last commits:
+
+first push
+up premier dockerization normaleement cest ok accessible grafana + prometheus, reste a set up
+MyRepoBot
+APP
+ —
+Yesterday at 4:50 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+Last commits:
+
+feat (home); add home page.
+    - move history redisign
+MyRepoBot
+APP
+ —
+Yesterday at 4:57 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+Last commits:
+
+feat(history): add a moves history back
+    - redisign of the moves history
+    - minor fix on board display (pixel bugs)
+feat(Local): implement game local
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/refreshToken_and_remove_moveNumber
+Last commits:
+
+* refactoring(TokensCookies):
+- Token Auth -> only one feature put tokens on cookies for all flux
+- this feature -> setTokensCookies into auth.service
+* (fix)refreshToken: silent access-token refresh in JwtGuard
+🟢 New branch was pushed by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: fix/refreshToken_and_remove_moveNumber
+MyRepoBot
+APP
+ —
+Yesterday at 5:49 PM
+➡️ Changes were pushed to the branch by tcmjlnt
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+Last commits:
+
+quick fick monitoring: node-exporter docker-compose cant use rslave tag in docker-desktop ie windows and macos users
+MyRepoBot
+APP
+ —
+Yesterday at 7:10 PM
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/refreshToken_and_remove_moveNumber
+Last commits:
+
+feat(history): add a moves history back
+    - redisign of the moves history
+    - minor fix on board display (pixel bugs)
+feat(Local): implement game local
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/main
+Last commits:
+
+* refactoring(TokensCookies):
+- Token Auth -> only one feature put tokens on cookies for all flux
+- this feature -> setTokensCookies into auth.service
+* (fix)refreshToken: silent access-token refresh in JwtGuard
+MyRepoBot
+APP
+ —
+Yesterday at 7:41 PM
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/friendshipTRASH
+🟢 New branch was pushed by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: feat/friendshipTRASH
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/friendship
+🚫 Branch was deleted by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/fix/refreshToken
+MyRepoBot
+APP
+ —
+1:42 PM
+➡️ Changes were pushed to the branch by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/friendship
+Last commits:
+
+* feat(db): add prisma model friendship and enum status (waiting/accepted
+)
+🟢 New branch was pushed by HopHouse13
+
+Repository: 42_ft_transcendence
+Branch: feat/friendship
+MyRepoBot
+APP
+ —
+3:52 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/design/rules
+Last commits:
+
+design(rule page): add rule page
+    - rule basis in four steps.
+🟢 New branch was pushed by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: design/rules
+MyRepoBot
+APP
+ —
+5:07 PM
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/chatSocket.IO
+Last commits:
+
+refactor(chat/)
+🟢 New branch was pushed by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: feat/chatSocket.IO
+➡️ Changes were pushed to the branch by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/chatSocket.IO
+Last commits:
+
+refactor(chat/)
+🟢 New branch was pushed by benoit-cht
+
+Repository: 42_ft_transcendence
+Branch: feat/chatSocket.IO
+MyRepoBot
+APP
+ —
+6:28 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/design/rules
+Last commits:
+
+design(PP & ToU) add Privacy Policy and Terms Of Service pages
+    - changes termsOfUse to termsOfService
+MyRepoBot
+APP
+ —
+6:37 PM
+🚫 Branch was deleted by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/gameLaucher
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/feat/chatSocket.IO
+Last commits:
+
+feat(chat): last message always visible in chat.
+    - add useEffect to get the last message in the botton of the chat
+MyRepoBot
+APP
+ —
+7:35 PM
+➡️ Changes were pushed to the branch by PatelGoum
+
+Repository: 42_ft_transcendence
+Branch: refs/heads/design/rules
+Last commits:
+
+fix(ToS): fix route to termsOfService
