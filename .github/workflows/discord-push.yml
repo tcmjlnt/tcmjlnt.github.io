@@ -17,6 +17,8 @@ jobs:
         run: |
           curl -H "Content-Type: application/json" \
           -d '{
+            "username": "GitHub",
+            "avatar_url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             "content": "🚀 **CRITICAL UPDATE: Main Branch!**\n**${{ github.actor }}** just pushed new code to `main`.\n\n🔗 [Review the changes here](${{ github.event.compare }})"
           }' \
           $DISCORD_WEBHOOK_URL
