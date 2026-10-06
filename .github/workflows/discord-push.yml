@@ -1,0 +1,34 @@
+name: Discord Push Notifications
+
+on:
+  push:
+    branches:
+      - '**' # Triggers on pushes to all branches
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Custom message for the 'main' branch
+      - name: Notify Main Branch Push
+        if: github.ref == 'refs/heads/main'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{
+            "content": "🚀 **CRITICAL UPDATE: Main Branch!**\n**${{ github.actor }}** just pushed new code to `main`.\n\n🔗 [Review the changes here](${{ github.event.compare }})"
+          }' \
+          $DISCORD_WEBHOOK_URL
+
+      # Step 2: Standard message for all other branches
+      - name: Notify Feature Branch Push
+        if: github.ref != 'refs/heads/main'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          curl -H "Content-Type: application/json" \
+          -d '{
+            "content": "📝 **New Push**\n**${{ github.actor }}** pushed to branch `${{ github.ref_name }}`.\n[View changes](${{ github.event.compare }})"
+          }' \
+          $DISCORD_WEBHOOK_URL
