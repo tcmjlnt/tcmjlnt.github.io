@@ -50,7 +50,7 @@ jobs:
                 else
                   {
                     color: 2328118,
-                    title: "🌳 **Push to Main 🌳",
+                    title: "🌳 **Push to Main** 🌳",
                     url: $url,
                     description: "**\($actor)** pushed directly to `\($ref)`.\n\n> \($commit)"
                   }
