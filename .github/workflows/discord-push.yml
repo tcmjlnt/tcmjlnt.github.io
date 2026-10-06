@@ -22,20 +22,25 @@ jobs:
           COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           PARENT_COUNT=$(git log -1 --format=%P | wc -w)
-          SUBJECT=$(git log -1 --format=%s) # Gets only the first line of the commit
+          SUBJECT=$(git log -1 --format=%s)
 
           if [ "$PARENT_COUNT" -gt 1 ]; then
             IS_MERGE="true"
-            # Looks for standard terminal merge: Merge branch 'feat/auth'
-            SOURCE_BRANCH=$(echo "$SUBJECT" | grep -oP "(?<=Merge branch ')[^']+" || true)
-            # Fallback if merged via GitHub PR: Merge pull request #1 from org/feat/auth
+            # 1. Look for ANYTHING wrapped in single quotes (catches local and remote-tracking merges)
+            SOURCE_BRANCH=$(echo "$SUBJECT" | grep -oP "(?<=')[^']+(?=')" | head -n 1 || true)
+
+            # 2. Fallback for GitHub Web UI Pull Requests (which don't use quotes)
             if [ -z "$SOURCE_BRANCH" ]; then
               SOURCE_BRANCH=$(echo "$SUBJECT" | grep -oP "(?<=from )[^ ]+" | cut -d'/' -f2- || true)
             fi
-            # Final fallback if someone manually deleted the default Git message
+
+            # 3. Final fallback
             if [ -z "$SOURCE_BRANCH" ]; then
               SOURCE_BRANCH="another branch"
             fi
+
+            # 4. Clean up the name (removes "origin/" if Git included it)
+            SOURCE_BRANCH=${SOURCE_BRANCH#origin/}
           else
             IS_MERGE="false"
             SOURCE_BRANCH=""
@@ -74,7 +79,7 @@ jobs:
 
       # Step 2: Feature Branches
       - name: Notify Feature Branch (Smart Detection)
-        if: github.ref != 'refs/heads/main' && github.event.created == false
+        if: github.ref != 'refs/heads/main' && toJson(github.event.commits) != '[]'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           COMMIT_MSG: ${{ github.event.head_commit.message }}
@@ -84,13 +89,21 @@ jobs:
 
           if [ "$PARENT_COUNT" -gt 1 ]; then
             IS_MERGE="true"
-            SOURCE_BRANCH=$(echo "$SUBJECT" | grep -oP "(?<=Merge branch ')[^']+" || true)
+            # 1. Look for ANYTHING wrapped in single quotes (catches local and remote-tracking merges)
+            SOURCE_BRANCH=$(echo "$SUBJECT" | grep -oP "(?<=')[^']+(?=')" | head -n 1 || true)
+
+            # 2. Fallback for GitHub Web UI Pull Requests (which don't use quotes)
             if [ -z "$SOURCE_BRANCH" ]; then
               SOURCE_BRANCH=$(echo "$SUBJECT" | grep -oP "(?<=from )[^ ]+" | cut -d'/' -f2- || true)
             fi
+
+            # 3. Final fallback
             if [ -z "$SOURCE_BRANCH" ]; then
               SOURCE_BRANCH="another branch"
             fi
+
+            # 4. Clean up the name (removes "origin/" if Git included it)
+            SOURCE_BRANCH=${SOURCE_BRANCH#origin/}
           else
             IS_MERGE="false"
             SOURCE_BRANCH=""
