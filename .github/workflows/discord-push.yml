@@ -74,7 +74,7 @@ jobs:
 
       # Step 2: Feature Branches
       - name: Notify Feature Branch (Smart Detection)
-        if: github.ref != 'refs/heads/main'
+        if: github.ref != 'refs/heads/main' && github.event.created == false
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           COMMIT_MSG: ${{ github.event.head_commit.message }}
@@ -112,14 +112,14 @@ jobs:
                     color: 8540383,
                     title: "🛤 Code Merged into Branch 🛤",
                     url: $url,
-                    description: "__**\($actor)** merged `\($source)` into `\($ref)`.__\n\n> \($commit)"
+                    description: "**\($actor)** merged `\($source)` into `\($ref)`.\n\n> \($commit)"
                   }
                 else
                   {
                     color: 13801762,
                     title: "🌱 Push to Branch 🌱",
                     url: $url,
-                    description: "__**\($actor)** pushed to `\($ref)`.__\n\n> \($commit)"
+                    description: "**\($actor)** pushed to `\($ref)`.\n\n> \($commit)"
                   }
                 end
               ]
