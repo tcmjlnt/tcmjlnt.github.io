@@ -9,6 +9,12 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
+      # REQUIRED: Downloads your repository so 'git log' can inspect the commits
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
       # Step 1: Main Branch (Green Push / Blue Merge)
       - name: Notify Main Branch (Smart Detection)
         if: github.ref == 'refs/heads/main'
@@ -44,7 +50,7 @@ jobs:
                 else
                   {
                     color: 2328118,
-                    title: "🚀 CRITICAL UPDATE: Main Branch",
+                    title: "🌳 **Push to Main 🌳",
                     url: $url,
                     description: "**\($actor)** pushed directly to `\($ref)`.\n\n> \($commit)"
                   }
@@ -89,7 +95,7 @@ jobs:
                 else
                   {
                     color: 13801762,
-                    title: "📝 New Push to Branch",
+                    title: "🌱 Push to Branch 🌱",
                     url: $url,
                     description: "**\($actor)** pushed to `\($ref)`.\n\n> \($commit)"
                   }
